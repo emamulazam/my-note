@@ -171,3 +171,60 @@ To see commit by anther name
 git log --author="<auther name>"
 ```
 
+To see certain keyword commit in commit massage
+
+```
+git log --grep="<keyword>"
+```
+
+## Undo commit
+
+if it is your commits
+
+```
+┌──(azam㉿kali)-[~/Desktop/prac]
+└─$ git log   
+commit 5724e6ab34548b47cec76e19b93f09478870bb3b (HEAD -> master)
+Author: emamulazam <emamulazam04@gmail.com>
+Date:   Fri Jul 25 15:48:13 2025 +0600
+
+    commit 6
+
+commit 67f4ef8c7515a58476f804e0c276f0b0dd6d8110
+Author: emamulazam <emamulazam04@gmail.com>
+Date:   Fri Jul 25 15:47:43 2025 +0600
+
+    commit 5
+
+commit 37c4adad4231830068640d552fbe11116385eee3
+Author: emamulazam <emamulazam04@gmail.com>
+Date:   Fri Jul 25 15:46:39 2025 +0600
+
+    commit 4
+```
+
+if you want to return to `67f4ef8c7515a58476f804e0c276f0b0dd6d8110` then and changes go to staging area
+
+```
+git reset --soft 67f4ef8c7515a58476f804e0c276f0b0dd6d8110
+```
+
+You can see changes by
+
+```
+git diff --staged
+```
+
+if you want to return to `67f4ef8c7515a58476f804e0c276f0b0dd6d8110` then and changes go to non-staging area
+
+```
+git reset --mixed 67f4ef8c7515a58476f804e0c276f0b0dd6d8110
+```
+
+Then you can see by using 
+
+```
+git status
+```
+
+
