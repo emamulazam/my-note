@@ -143,6 +143,12 @@ git commit --allow-empty -m "<message>"
 
 ## Git log
 
+To see all the command and one line
+
+```
+git log -all --oneline
+```
+
 To see last 2 commit
 
 ```
@@ -178,6 +184,8 @@ git log --grep="<keyword>"
 ```
 
 ## Undo commit
+
+### git reset (Data lose)
 
 if it is your commits
 
@@ -227,4 +235,42 @@ Then you can see by using
 git status
 ```
 
+if you want to return to `67f4ef8c7515a58476f804e0c276f0b0dd6d8110` and delete after code permanently use
+
+```
+git reset --hard 67f4ef8c7515a58476f804e0c276f0b0dd6d8110
+```
+
+
+### git revert (No Data lose)
+
+If you don't want do delete present commit but go back to last commit You should use
+
+```
+┌──(azam㉿kali)-[~/Desktop/prac]
+└─$ git log --oneline      
+2150c6d (HEAD -> master) Droppy
+d13ebc2 jerry
+d85e24a TOM
+                                                                       
+┌──(azam㉿kali)-[~/Desktop/prac]
+└─$ git revert 2150c6d
+[master bc93c93] Revert "Droppy"
+ 1 file changed, 1 deletion(-)
+                                                                       
+┌──(azam㉿kali)-[~/Desktop/prac]
+└─$ git log --oneline 
+bc93c93 (HEAD -> master) Revert "Droppy"
+2150c6d Droppy
+d13ebc2 jerry
+d85e24a TOM
+```
+
+You should use present hash
+
+If you now want to see/use Droppy use
+
+```
+git checkout 2150c6d
+```
 
