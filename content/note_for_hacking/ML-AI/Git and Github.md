@@ -274,3 +274,29 @@ If you now want to see/use Droppy use
 git checkout 2150c6d
 ```
 
+## Git branch
+
+To see local branch
+
+```
+git branch
+```
+
+To `create a new branch` we will use branch name as `new`
+
+```
+git branch new
+```
+
+To go another branch name `new` 
+
+```
+git checkout new 
+```
+
+To delete branch 
+
+```
+git branch -d new
+```
+
