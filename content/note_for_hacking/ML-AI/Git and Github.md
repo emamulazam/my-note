@@ -1,7 +1,4 @@
 
-
-
-
 # Starting
 
 ## Config file edit
@@ -81,7 +78,7 @@ Initialize git repository with a name like `main`
 git init --initial-branch=main
 ```
 
-# Undo git add
+## Undo git add
 
 If you want add some unnecessary file and now you want to undo the **git add** then
 
@@ -89,3 +86,56 @@ If you want add some unnecessary file and now you want to undo the **git add** t
 git rm --cached <file name>
 ```
 
+## Git commit
+
+If you changes edit a tracked file then use
+
+```
+git commit -ma "<comment>"
+```
+
+### Modify commit
+
+#### With new message
+
+First you should add all the files to staging area
+
+```
+git add .
+```
+
+Then user the command
+
+```
+git commit --amend
+```
+
+#### Without new message
+
+First you should add all the files to staging area
+
+```
+git add .
+```
+
+Then user the command
+
+```
+git commit --amend --no-edit
+```
+
+### Give a sign with commit
+
+To give a sign with commit you should use
+
+```
+git commit -sm "<comment>" 
+```
+
+### Make an empty commit
+
+To make an empty commit
+
+```
+git commit --allow-empty -m "<message>"
+```
