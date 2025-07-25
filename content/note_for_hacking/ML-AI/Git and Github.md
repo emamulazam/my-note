@@ -139,3 +139,35 @@ To make an empty commit
 ```
 git commit --allow-empty -m "<message>"
 ```
+
+
+## Git log
+
+To see last 2 commit
+
+```
+git log -n 2
+```
+
+To see
+
+
+| command                       | Work                                   |
+| ----------------------------- | -------------------------------------- |
+| git log --since="1 week ago"  | Show commits from the **last 1 week**  |
+| git log --since="1 day ago"   | Show commits from the **last 1 day**   |
+| git log --since="1 hour ago"  | Show commits from the **last 1 hour**  |
+| git log --since="1 month ago" | Show commits from the **last 1 month** |
+
+To see commit form 1st January 2025 to 31 January 2025
+
+```
+git log --since="2025-01-01" --until="2025-01-31"
+```
+
+To see commit by anther name
+
+```
+git log --author="<auther name>"
+```
+
