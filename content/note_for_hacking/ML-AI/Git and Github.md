@@ -314,3 +314,77 @@ To merge `new` branch with `master` branch , you should first go to `master` bra
 git merge new
 ```
 
+### Git Conflict & Resolution
+
+A **Git conflict** happens when Git can’t automatically merge changes from different branches or commits.
+
+This usually happens when:
+
+- Two people change the same lines in a file.
+    
+- A file is deleted in one branch but modified in another.
+    
+- You try to merge, rebase, cherry-pick, or pull.
+
+#### 🔥 Example of a Conflict
+
+Two branches (`main` and `feature`) both edited the same line of `index.html`.
+
+```
+<<<<<<< HEAD
+<h1>Hello from main</h1>
+=======
+<h1>Hello from feature</h1>
+>>>>>>> feature
+```
+
+#### 🔧 How to Resolve a Git Conflict
+
+### Step-by-Step
+
+1. **Trigger the conflict**  
+    (e.g., run `git merge feature` from `main`)
+    
+2. **See the conflict**  
+    Git will show:
+```
+CONFLICT (content): Merge conflict in index.html
+```
+    
+3. **Open the conflicted file**  
+    You’ll see this format:
+    
+```
+<<<<<<< HEAD
+Your code (main branch)
+=======
+Incoming code (feature branch)
+>>>>>>> feature
+```
+    
+4. **Edit the file manually**  
+    Decide what to keep, delete conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`), and save.
+    
+5. **Mark as resolved**
+    
+```
+git add <conflicted-file>
+```
+    
+6. **Commit the merge**
+    
+```
+git commit
+```
+
+
+#### 🧠 Useful Commands Summary
+
+| Command             | Description               |
+| ------------------- | ------------------------- |
+| `git status`        | Check what’s in conflict  |
+| `git diff`          | See differences in files  |
+| `git log --merge`   | See conflicting commits   |
+| `git merge --abort` | Cancel a bad merge        |
+| `git add <file>`    | Mark conflict as resolved |
+| `git commit`        | Finish the merge          |
