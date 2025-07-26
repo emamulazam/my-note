@@ -294,9 +294,23 @@ To go another branch name `new`
 git checkout new 
 ```
 
+OR
+
+```
+git switch new
+```
+
 To delete branch 
 
 ```
 git branch -d new
+```
+
+## Merge branch
+
+To merge `new` branch with `master` branch , you should first go to `master` branch and then use the command
+
+```
+git merge new
 ```
 
