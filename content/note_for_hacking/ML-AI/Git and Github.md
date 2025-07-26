@@ -314,6 +314,28 @@ To merge `new` branch with `master` branch , you should first go to `master` bra
 git merge new
 ```
 
+Another way is 
+
+```
+┌──(azam㉿kali)-[~/Desktop/prac]
+└─$ git log --all --oneline
+5c6a103 (fi1) add another file
+4736e57 reslove conflict
+c180ea6 added a of question
+b455f89 (HEAD -> fi2) added a lin in f1.txt
+4b8e62a (master) Merge branch 'fi2'
+7a26ae3 add ext2.txt
+901b0d7 add ext1.txt
+ddbbc73 add f1 f2 f3 text file
+```
+
+Now we will take `5c6a103 (fi1) add another file` commit to `fi2` branch. After going `fi2` branch we will use this command
+
+```
+git cherry-pick 5c6a103
+```
+
+This command make a new commit in `fi2` branch
 ### Git Conflict & Resolution
 
 A **Git conflict** happens when Git can’t automatically merge changes from different branches or commits.
