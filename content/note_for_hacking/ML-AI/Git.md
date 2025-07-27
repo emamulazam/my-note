@@ -413,6 +413,12 @@ git commit
 
 # Remote Repository
 
+To see remote repositry
+
+```
+git remote -v 
+```
+
 ## Connect local and remote repository
 
 To do this 
@@ -445,4 +451,76 @@ To see it
 
 ```
 git branch -r
+```
+
+## To clone repository
+
+If there have any remote repository you can use 
+```
+git clone <code url>
+```
+
+## Download changes in remote repository
+
+If there have any changes in `origin/master` in remote repository
+
+1. If you want to only update `origin/master` then use
+
+```
+git fetch
+```
+
+Then you can merge the branch
+
+2. If you want to make changes in `master` branch directly then use
+
+```
+git pull
+```
+
+If any branch deleted in remote repository then You should use to update this
+
+```
+git fetch --prune
+```
+
+If you want to take only one beach changes and think the branch name is `new` then use
+
+```
+git fetch origin new
+```
+
+If a local repository is connect with more than one remote repository and you want to take all the changes at once than use 
+
+```
+git fetch --all
+```
+
+If there are a new branch name `new1` you can pull it in your `new` branch by using
+
+```
+git fetch
+git pull origin new1
+```
+
+## Temporarily save 
+
+If you edit a committed file and you don't want to commit it now but you move another branch then you should use 
+
+```
+git stash
+```
+
+If you want to see the `stash` file use
+
+```
+┌──(azam㉿kali)-[~/Desktop/prac/emamulazam-project]
+└─$ git stash list 
+stash@{0}: WIP on rps: 7b640de question
+```
+
+To get the edited file back (`stash@{0}` we get if from the list)
+
+```
+git stash apply stash@{0}
 ```
