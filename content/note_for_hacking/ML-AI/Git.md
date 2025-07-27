@@ -1,5 +1,5 @@
 
-# Starting
+# Local Repository
 
 ## Config file edit
 
@@ -410,3 +410,39 @@ git commit
 | `git merge --abort` | Cancel a bad merge        |
 | `git add <file>`    | Mark conflict as resolved |
 | `git commit`        | Finish the merge          |
+
+# Remote Repository
+
+## Connect local and remote repository
+
+To do this 
+
+Here I use `ssh`
+
+```
+git remote add origin git@github.com:emamulazamextra/prac.git
+```
+
+Here we connecting local repository to `git@github.com:emamulazamextra/prac.git` and `origin` is reference of the link
+
+## Push 
+
+To push the code in the remote repository you need to use 
+
+```
+git push
+```
+
+but if you want to push a new branch and the branch name is `new` then
+
+```
+git push -u origin new
+```
+
+## Remote branch show 
+
+To see it 
+
+```
+git branch -r
+```
