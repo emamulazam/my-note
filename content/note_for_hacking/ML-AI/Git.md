@@ -524,3 +524,18 @@ To get the edited file back (`stash@{0}` we get if from the list)
 ```
 git stash apply stash@{0}
 ```
+
+## Ignore files
+
+If we want to ignore any file we need to create a file name `.gitignore` 
+
+Which file and folder we want to ignore we will put the names in the `.gitignore` 
+
+If we want to ignore all `html` file, `name.js` file, `pic` folder we will write it in `.gitignore` like this
+
+```
+*.html
+name.js
+pic/
+```
+
