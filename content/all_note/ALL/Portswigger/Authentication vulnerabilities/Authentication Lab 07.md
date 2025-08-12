@@ -12,4 +12,4 @@ This lab is vulnerable to username enumeration. It uses account locking, but thi
 3. Now we will use intruder tab to brute-force the given username 5 time and remove the response with  `Invalid username or password.`
 4. `ag` (change every-time) give use `You have made too many incorrect login attempts. Please try again in 1 minute(s).` so it is the valid username.
 5. Now we will make password brute-force and remove the response `You have made too many incorrect login attempts. Please try again in 1 minute(s).` Then we will find our password and that is `1234`
-6. Now login and complete the lab.
+6. Now login and complete the lab. 
